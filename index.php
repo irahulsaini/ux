@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="./dist/css/animate.min.css">
         <link rel="stylesheet" href="./dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="./dist/css/style.css"/>
         <style>
@@ -32,13 +33,18 @@
         
         <section class="main-banner">
             <video  loop="true" preload="auto" playsinline autoplay muted >
-                <source src="./dist/media/main.mp4" type="video/mp4"/>
+                ]<!-- Desktop Video -->
+                <source src="./dist/media/main.mp4" type="video/mp4" media="(min-width: 1025px)">
+                <!-- Tablet Video -->
+                <!-- <source src="./dist/media/main-m.mp4" type="video/mp4" media="(min-width: 768px)"> -->
+                <!-- Mobile Video -->
+                <source src="./dist/media/main-m.mp4" type="video/mp4" media="(max-width: 767px)">                
             </video>
         </section>
         <section class="section-expertise ">
             <div class="container-fluid rounded-top-5 bg-light overflow-hidden py-5 px-4">
                 <div class="row">
-                    <div class="col-md-5 d-flex align-items-end ">
+                    <div class="col-md-5 d-flex align-items-end wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">
                         <ul class="d-flex border border-1 border-dark py-2 px-3 list-unstyled rounded gap-4">
                             <li class="text-uppercase text-nowrap">open to projects</li>
                             <li class="text-uppercase text-nowrap">&bull;</li>
@@ -49,7 +55,9 @@
                         
                     </div>
                     <div class="col-md-5">
-                        <div class="display-5">I design user experiences that build strong digital brands</div>
+                        <div class="display-5 wow slideInRight" data-wow-duration="2s" data-wow-delay="5s">
+                            I design user experiences that build strong digital brands
+                        </div>
                     </div>
                 </div>
                 <div class="py-5">
@@ -57,31 +65,7 @@
                 </div>
             </div>
         </section>
-<style>
-.section-services{
-    position:relative;
-    z-index: 1;
-}
-.service-card{
-    position: sticky;
-    top:0;
-}
-.service-card:nth-child(2){
-    position: sticky;
-    top:120px;
-}
-.service-card:nth-child(3){
-    position: sticky;
-    top:240px;
-}
-.service-card:nth-child(4){
-    position: sticky;
-    top:0;
-}
-.service-card video{
-    max-width:100%;
-}
-</style>
+
         <section class="section-services bg-white fw-bold px-md-3">
             <div class="container-fluid px-md-4">
                 <div class="heading text-uppercase small pb-3">my expertise</div>
@@ -101,7 +85,7 @@
                             <div class="col-md-7">
                                 <p class="fw-light">As an experienced UI Designer, I create cohesive and engaging interfaces that seamlessly translate business strategy into intuitive visual solutions. I specialize in UI design for mobile apps, websites, and systems, meticulously attending to every detail to ensure your product is not only beautiful but also highly effective</p>
                                 <div class="btn-wrapper border-top border-1 border-dark pt-4">
-                                    <div class="d-flex gap-3">
+                                    <div class="d-flex flex-wrap gap-3">
                                         <button class="btn btn-outline-dark text-uppercase small">website design</button>
                                         <button class="btn btn-outline-dark text-uppercase small">app design</button>
                                     </div>
@@ -125,7 +109,7 @@
                             <div class="col-md-7">
                                 <p class="fw-light">As a dedicated UX Designer, I translate complex user needs and business objectives into clear, user-centered design strategies. My services encompass the full UX lifecycle, from in-depth user research and robust information architecture to wireframing and prototyping.</p>
                                 <div class="btn-wrapper border-top border-1 border-dark pt-4">
-                                    <div class="d-flex gap-3">
+                                    <div class="d-flex flex-wrap gap-3">
                                         <button class="btn btn-outline-dark text-uppercase small">Information architecture</button>
                                         <button class="btn btn-outline-dark text-uppercase small">wireframes</button>
                                         <button class="btn btn-outline-dark text-uppercase small ">prototyping</button>
@@ -150,7 +134,7 @@
                             <div class="col-md-7">
                                 <p class="fw-light">I bring ideas to life through dynamic and engaging motion design. My services transform static concepts into captivating animated visuals, perfect for enhancing brand stories, explaining complex ideas, and creating memorable user experiences across various digital platforms.</p>
                                 <div class="btn-wrapper border-top border-1 border-dark pt-4">
-                                    <div class="d-flex gap-3">
+                                    <div class="d-flex flex-wrap gap-3">
                                         <button class="btn btn-outline-dark text-uppercase small">interaction design</button>
                                         <button class="btn btn-outline-dark text-uppercase small">3d</button>
                                         <button class="btn btn-outline-dark text-uppercase small ">motion</button>
@@ -176,7 +160,7 @@
                             <div class="col-md-7">
                                 <p class="fw-light">I offer comprehensive No-Code Website Development services, guiding clients from concept to a live, polished website. My process includes detailed requirements gathering, intuitive user experience (UX) planning, custom visual design, responsive development for all devices</p>
                                 <div class="btn-wrapper border-top border-1 border-dark pt-4">
-                                    <div class="d-flex gap-3">
+                                    <div class="d-flex flex-wrap gap-3">
                                         <button class="btn btn-outline-dark text-uppercase small">development</button>
                                     </div>
                                 </div>
@@ -188,72 +172,6 @@
                 
             </div>
         </section>
-        <style >
-            .crafting-since{
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                width: 90vw;
-                font-size: 31vw;
-                text-align: center;
-                overflow: hidden;
-                white-space: nowrap;
-                font-weight:100;
-                line-height:1;
-                color:#000!important  
-            }
-            .shapes .border-shape{
-                position:absolute;
-                top:0;
-                left:0px;
-                bottom:0;
-                background:#000;
-                width:1px;
-                opacity:0.4;
-            }
-            .shapes .border-shape:nth-child(2){
-                left:20%;
-            }
-            .shapes .border-shape:nth-child(3){
-                left:30%;
-            }
-            .shapes .border-shape:nth-child(4){
-                left:40%;
-            }
-            .shapes .border-shape:nth-child(5){
-                left:50%;
-            }
-            .shapes .border-shape:nth-child(6){
-                left:60%;
-            }
-            .shapes .border-shape:nth-child(7){
-                left:70%;
-            }
-            .shapes .border-shape:nth-child(8){
-                left:75%;
-            }
-            .shapes .border-shape:nth-child(9){
-                left:80%;
-            }
-            .shapes .border-shape:nth-child(10){
-                left:85%;
-            }
-            .shapes .border-shape:nth-child(11){
-                left:90%;
-            }
-            .shapes .border-shape:nth-child(12){
-                left:95%;
-            }
-            .shapes .border-shape:nth-child(13){
-                left:97%;
-            }
-            .shapes .border-shape:nth-child(14){
-                left:99%;
-            }
-            .shapes .border-shape:nth-child(15){
-                left:100%;
-            }
-        </style>
         <section class="section-services bg-white fw-bold px-md-3 position-relative">
             <div class="container-fluid px-md-4 position-relative py-5">
                 <div class="services-content position-relative z-2">
@@ -328,10 +246,14 @@
             </div>
         </header>
         <script src="./dist/js/bootstrap.min.js"></script>
+        <script src="./dist/js/wow.min.js"></script>
         <script>
             function toggleNavbar(){
                 document.querySelector('.main-menu').classList.toggle('active')
             }
+        </script>
+        <script>
+            new WOW().init();
         </script>
 	</body>
 </html>
